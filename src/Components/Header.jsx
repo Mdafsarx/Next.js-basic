@@ -26,8 +26,18 @@ export default function Header() {
     }
   ];
 
+
   const handle = () => {
     routerLink.push('/login')
+  }
+
+  // simple layout logic for dashboard
+  if (pathName.includes('/dashboard')) {
+    return (
+      <div className="bg-red-700 p-6 text-white text-center font-bold">
+        this is dashboard
+      </div>
+    )
   }
 
   return (
