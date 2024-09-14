@@ -13,6 +13,10 @@ export default function Header() {
       title: 'About'
     },
     {
+      path: '/products',
+      title: 'products'
+    },
+    {
       path: '/contact',
       title: 'Contact'
     },
@@ -23,7 +27,7 @@ export default function Header() {
   ];
 
   const handle = () => {
-     routerLink.push('/login')
+    routerLink.push('/login')
   }
 
   return (
