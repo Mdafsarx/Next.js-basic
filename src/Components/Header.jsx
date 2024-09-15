@@ -21,6 +21,10 @@ export default function Header() {
       title: 'Contact'
     },
     {
+      path: '/posts',
+      title: 'Posts'
+    },
+    {
       path: '/category',
       title: 'Category'
     },
