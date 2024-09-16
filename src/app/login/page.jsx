@@ -4,7 +4,7 @@ export default function Login() {
   return (
     <div>
       <p>
-        This is Login page
+        <button className="btn btn-success">Success</button>
       </p>
       <button>
         <Link href={`/login/register`}>Register</Link>
