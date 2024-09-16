@@ -13,6 +13,7 @@ export const metadata = {
     //     absolute: 'only this text show'
     // },
     description: "Post page",
+    keywords: ['proactive']
 };
 
 
