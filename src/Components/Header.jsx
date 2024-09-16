@@ -9,8 +9,8 @@ export default function Header() {
   const routerLink = useRouter()  // useNavigate()
   const navLink = [
     {
-      path: '/about',
-      title: 'About'
+      path: '/meals',
+      title: 'Meals'
     },
     {
       path: '/products',
