@@ -61,8 +61,7 @@ const data = [
     }
 ]
 
-
-// dynamic  meta data set 
+// dynamic meta data set 
 export const generateMetadata = async ({ params }) => {
     const { title, description } = data?.find(Data => Data.id === params.id)
     return {
