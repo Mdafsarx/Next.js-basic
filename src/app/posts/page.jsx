@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 // Manual meta data set dif page
 // export const metadata = {
@@ -20,6 +21,9 @@ export const metadata = {
 const getPosts = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts')
     const data = await res.json();
+    // if (data) {
+    //     redirect('/')
+    // }
     return data
 }
 
