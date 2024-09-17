@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import { Roboto } from "next/font/google";
+import { Open_Sans } from "next/font/google"; 
+
 import "./globals.css";
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
