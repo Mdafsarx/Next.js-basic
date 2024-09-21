@@ -1,25 +1,35 @@
 import NextAuth from "next-auth/next"
 import CredentialsProvider from "next-auth/providers/credentials"
 
-const handler = NextAuth({
+const handler = async () => NextAuth({
 
     session: {
-        strategy: "jwt"
+        strategy: 'jwt',
+        maxAge: 30 * 24 * 60 * 60
     },
+
     providers: [
         CredentialsProvider({
+
             credentials: {
-                email: { label: 'username', type: 'text', placeholder: 'enter your name', required: true },
-                password: { label: 'password', type: 'password', placeholder: 'enter your password' , required: true }
+                email: {},
+                password: {}
             },
-            async authorize(credentials) {
-                if (!credentials) {
-                    return null
-                }
-                return true
-            }
+
+            async authorize (credentials) {
+                return true;
+            },
+
         })
     ],
+
+    callbacks: {},
+
+    pages: {
+        signIn: '/log'
+    }
+
 })
 
-export { handler as POST , handler as GET }
+
+export { handler as GET, handler as POST }

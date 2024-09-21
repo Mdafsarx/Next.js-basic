@@ -1,13 +1,22 @@
 'use client'
 export default function page() {
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const newUser={
+        const newUser = {
             username: e.target.username.value,
             password: e.target.password.value,
         }
-        console.log(newUser)
+        const res = await fetch('http://localhost:3000/log/api', {
+            method: "POST",
+            body: JSON.stringify(newUser),
+            headers: {
+                "content-type": "application/json"
+            }
+        })
+        if (res.status === 200) {
+            e.target.reset()
+        }
     }
 
 
