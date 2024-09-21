@@ -36,7 +36,7 @@ export default function Header() {
 
 
   const handle = () => {
-    routerLink.push('/login')
+    routerLink.push('/api/auth/login')
   }
 
   // simple layout logic for dashboard

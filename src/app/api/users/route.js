@@ -1,6 +1,9 @@
 export const GET = async () => {
-    return Response.json({
-        users
+    return Response.json(
+        users, {
+        headers: {
+            "Set-Cookie": "theme=dark"
+        }
     })
 }
 
